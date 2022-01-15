@@ -9,6 +9,11 @@ var Player = {
     width: 50,
     height: 50,
 
+    checkPoint: {
+        x: 300,
+        y: 300
+    },
+
     hsp: 0,
     vsp: 0,
     walkSpeed: 4,

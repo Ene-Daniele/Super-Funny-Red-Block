@@ -8,8 +8,7 @@ function step(){
     jump();
     gravity(Player);
 
-    multiDraw(LVL0.blocks);
-    multiCollisionStop(LVL0.blocks);
+    LVL0.update();
 
     Player.x += Player.hsp;
     Player.y += Player.vsp;
