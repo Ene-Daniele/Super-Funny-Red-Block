@@ -6,3 +6,4 @@ Sequel to Funny Red Block
 > |  Camera system!!! (maybe)                                                                                                                                                                        
 > |  Metroidvenia styled progression (gaining skills to proceed (turning some booleans true xd) )                                                                                                                                                                        
 > |  Not a mess like the first game!!! (I actually managed to split js files into folders and stuff)                                                                                                                                                           
+> | Typo in commit
