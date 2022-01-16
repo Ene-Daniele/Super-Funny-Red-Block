@@ -9,6 +9,7 @@ keyboard = {
     dash: false,
 
     interact: false,
+    intReleased: true,
 }
 
 document.addEventListener("keydown", (event) => {
@@ -48,7 +49,10 @@ document.addEventListener("keydown", (event) => {
 
         case "x":
         case "X":
-            keyboard.interact = true;
+            if (keyboard.intReleased){
+                keyboard.interact = true;
+                keyboard.intReleased = false;
+            }
             break;
     }
 });
@@ -90,7 +94,7 @@ document.addEventListener("keyup", (event) => {
             
         case "x":
         case "X":
-            keyboard.interact = false;
+            keyboard.intReleased = true;
             break;
     }
 });
