@@ -4,10 +4,9 @@ function singleDraw(box){
     context.fillRect(box.x, box.y, box.width, box.height);
 }
 
-function multiDraw(box){
-    
-    for(let i = 0; i < box.length; i++){
-        context.fillStyle = box[i].color;
-        context.fillRect(box[i].x, box[i].y, box[i].width, box[i].height);
-    }
+function textDraw(text, x, y){
+
+    context.fillStyle = "white";
+    context.font = '48px serif';
+    context.fillText(text, x, y);
 }

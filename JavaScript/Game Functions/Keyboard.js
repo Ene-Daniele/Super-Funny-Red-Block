@@ -7,6 +7,8 @@ keyboard = {
     jump: false,
     slash: false,
     dash: false,
+
+    interact: false,
 }
 
 document.addEventListener("keydown", (event) => {
@@ -42,6 +44,11 @@ document.addEventListener("keydown", (event) => {
         case "d":
         case "D":
             keyboard.dash = true;
+            break;
+
+        case "x":
+        case "X":
+            keyboard.interact = true;
             break;
     }
 });
@@ -79,6 +86,11 @@ document.addEventListener("keyup", (event) => {
         case "d":
         case "D":
             keyboard.dash = false;
+            break;
+            
+        case "x":
+        case "X":
+            keyboard.interact = false;
             break;
     }
 });
