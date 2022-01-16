@@ -1,5 +1,7 @@
 class Spring extends GameObject {
 
+    //TODO Make the spring able to be put on other stuff like moving blocks
+
     constructor(posX, posY){
 
         super(posX + 5, posY -15, 40, 15, "orange")
@@ -21,6 +23,7 @@ class Spring extends GameObject {
             }
 
             Player.vsp = -13;
+            Player.hsp += Math.sign(Player.hsp) * 5;
         }
     }
 }

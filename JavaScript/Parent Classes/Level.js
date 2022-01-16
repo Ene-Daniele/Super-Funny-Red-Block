@@ -5,17 +5,17 @@ class Level {
         this.map = givenMap;
     }
 
-    //Make a camera instance here
-
     update(){
 
         for(let i = 0; i < this.map.length; i++){
             
             this.map[i].draw();
             this.map[i].collision();
+            cameraPan(this.map[i]);
         }
     }
 
+    //TODO Make a map reset
     reload(){
 
         Player.x = Player.checkPoint.x;

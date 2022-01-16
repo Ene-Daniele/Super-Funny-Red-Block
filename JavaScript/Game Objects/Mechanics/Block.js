@@ -26,20 +26,20 @@ class Block extends GameObject{
                     Player.y += Math.sign(Player.vsp);
                 }
     
-                Player.vsp = 0;
-    
-                if (Player.y + Player.height < this.y){
+                if (Player.y + Player.height < this.y + 20){
+                    Player.vsp = 0;
                     Player.onGround = true;
                     Player.jumpTime = 100;
                 } else {
-                    Player.jumpTime -= 30;
+                    Player.jumpTime = 0;
+                    Player.vsp = 4;
                 }
             }
     
-            if (Player.y + Player.height > this.y & Player.y < this.y + (this.height / 2)){
+            if (Player.y + Player.height > this.y & Player.y < this.y + 20){
                 Player.y -= 2;
             }
-            if (Player.y < this.y + this.height & Player.y + Player.height > this.y + (this.height / 2)){
+            if (Player.y < this.y + this.height & Player.y + Player.height > this.y + 30){
                 Player.y += 2;
             }
 

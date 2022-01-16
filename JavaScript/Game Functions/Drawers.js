@@ -4,9 +4,9 @@ function singleDraw(box){
     context.fillRect(box.x, box.y, box.width, box.height);
 }
 
-function textDraw(text, x, y){
+function textDraw(text, x, y, size){
 
     context.fillStyle = "white";
-    context.font = '48px serif';
+    context.font = size + 'px serif';
     context.fillText(text, x, y);
 }

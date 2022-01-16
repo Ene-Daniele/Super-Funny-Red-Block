@@ -1,8 +1,12 @@
 let grv = 0.4;
+let friction = 2;
 
 var Player = {
 
     color: "red",
+
+    distanceX: 0,
+    distanceY: 0,
 
     x: 300,
     y: 300,

@@ -3,7 +3,7 @@ function walk(){
     if (Player.hsp < Player.maxSpeed && Player.hsp > -Player.maxSpeed){
         Player.hsp += Player.walkSpeed * (keyboard.right - keyboard.left);
     }
-    Player.hsp -= Math.sign(Player.hsp) * 2;
+    Player.hsp -= Math.sign(Player.hsp) * friction;
 }
 
 function jump(){
@@ -20,6 +20,7 @@ function gravity(box){
     box.vsp += box.weight * grv;
 }
 
+//TODO Make this a climbing skill like in celeste instead
 function wallJump(){
 
 }

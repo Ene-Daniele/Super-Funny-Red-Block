@@ -2,7 +2,7 @@ class MovingBlock extends GameObject {
 
     constructor(posX, posY, width, height, nodes){
 
-        super(posX, posY, width, height, "green")
+        super(posX, posY -1, width, height, "green")
 
         //Speed attributes
         this.hsp = 0;
@@ -41,7 +41,7 @@ class MovingBlock extends GameObject {
             if ((Player.x + Player.width + Player.hsp) > this.x & Player.x + Player.hsp < (this.x + this.width)){
                
                 while ((Player.x + Player.width + Math.sign(Player.hsp)) < this.x & Player.x + Math.sign(Player.hsp) < (this.x + this.width)){
-                    Player.x += Math.sign(Player.hsp);
+                    Player.x += Math.sign(Player.hsp) *2;
                 }
 
                 Player.hsp = this.hsp; //Push the player if on sides (minus the sign so the player doesn stick to it)
@@ -59,7 +59,7 @@ class MovingBlock extends GameObject {
                
 
 
-                if (Player.y + Player.height < this.y){
+                if (Player.y + Player.height < this.y + 10){
                     
                     Player.vsp = 0; //Dont let the player fall through
                     Player.hsp = this.hsp; //Give the player the platform's speed
@@ -69,14 +69,14 @@ class MovingBlock extends GameObject {
                     Player.jumpTime = 100;
                 } else {
                     Player.jumpTime = 0;
-                    Player.y += 1;
+                    Player.y += 2;
                 }
             }
     
-            if (Player.y + Player.height > this.y & Player.y < this.y + (this.height / 2)){
+            if (Player.y + Player.height > this.y & Player.y < this.y + 10){
                 Player.y -= 2;
             }
-            if (Player.y < this.y + this.height & Player.y + Player.height > this.y + (this.height / 2)){
+            if (Player.y < this.y + this.height & Player.y + Player.height > this.y + 40){
                 Player.y += 2;
             }
 

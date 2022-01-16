@@ -95,6 +95,7 @@ document.addEventListener("keyup", (event) => {
         case "x":
         case "X":
             keyboard.intReleased = true;
+            keyboard.interact = false;
             break;
     }
 });

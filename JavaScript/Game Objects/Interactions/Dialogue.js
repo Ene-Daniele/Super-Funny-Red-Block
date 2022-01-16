@@ -21,8 +21,6 @@ class DialogueBox extends GameObject {
         };
     }
 
-    //(0, 550, 1470, 150, "rgb(0,0,0, 0.7)")
-
     behaviour(){
 
         if (this.inDialogue){
@@ -46,7 +44,8 @@ class DialogueBox extends GameObject {
             }
             
             singleDraw(this.dialogueBox);
-            textDraw(this.dialogueBox.texts[this.dialogueBox.textIndex], 20, 600);
+            textDraw(this.dialogueBox.speaker, 20, 600, 50);
+            textDraw(this.dialogueBox.texts[this.dialogueBox.textIndex], 20, 630, 20);
 
             Player.hsp = 0;
             if (keyboard.jump){
@@ -68,7 +67,7 @@ class DialogueBox extends GameObject {
             
             if (this.repeat){
                 
-                textDraw("X", this.x + 8, Player.y - 40)        
+                textDraw("X", this.x + 8, Player.y - 40, 30)        
                 if (keyboard.interact){
 
                     this.inDialogue = true;
