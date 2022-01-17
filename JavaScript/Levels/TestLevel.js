@@ -8,6 +8,7 @@ const LVL0 = new Level( //! Test Level
         new Block(350, 200, 100, 50, "white"),
         new Block(0, 610, 1470, 100),
 
+
         new Spring(700, 300),
 
         new DialogueBox(375, 150, "dev", [

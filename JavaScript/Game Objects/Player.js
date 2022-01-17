@@ -1,5 +1,6 @@
 let grv = 0.4;
 let friction = 2;
+let cameraStrength = 1;
 
 var Player = {
 

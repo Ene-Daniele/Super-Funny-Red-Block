@@ -11,7 +11,7 @@ class Level {
             
             this.map[i].draw();
             this.map[i].collision();
-            cameraPan(this.map[i]);
+            cameraPan(this.map[i], cameraStrength);
         }
     }
 

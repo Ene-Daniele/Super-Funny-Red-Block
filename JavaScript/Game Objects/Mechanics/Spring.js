@@ -4,11 +4,13 @@ class Spring extends GameObject {
 
     constructor(posX, posY){
 
-        super(posX + 5, posY -15, 40, 15, "orange")
+        super(posX +10, posY -15, 40, 15, "orange")
     }
 
     collision(){
 
+        this.x -= Math.sign(Player.hsp) / (10 / cameraStrength);
+        
         if ((
         Player.x + Player.width + Player.hsp) > this.x && 
         Player.x + Player.hsp < (this.x + this.width) && 
@@ -24,6 +26,7 @@ class Spring extends GameObject {
 
             Player.vsp = -13;
             Player.hsp += Math.sign(Player.hsp) * 5;
+
         }
     }
 }

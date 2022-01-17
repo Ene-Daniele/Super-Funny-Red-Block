@@ -2,7 +2,7 @@
 //I mean it works for games that have a png as a bg and thats it, but come on i had to figure out this all on my own, AGAIN
 //I couldnt get relevant help from google ONCE during this endeavor
 
-function cameraPan(box){
+function cameraPan(box, strength){
 
     /*
     TODO Add a camera strength parameter wich is mutliplied by that 30 over there, so like ok so like right
@@ -11,7 +11,7 @@ function cameraPan(box){
     TODO and then like strength is either 1, or 2, or 3, etc depending on how strong it must be. (1 is the default)
     */
 
-    distanceX = ((screen.availWidth / 2 - Player.x) / 30); // ? sceen.availWidth is AMAZING <3<3<3
+    distanceX = ((screen.availWidth / 2 - Player.x) / (30)); // ? sceen.availWidth is AMAZING <3<3<3
     // * I need this variable because it changes overtime, very slightly but it does, so i need the value once every function.
 
     box.x += distanceX;
