@@ -1,8 +1,12 @@
 class Level {
 
-    constructor(givenMap){
+    constructor(panStrength, checkpointN, givenMap){
 
         this.map = givenMap;
+        
+        this.panStrength = panStrength; //Default pan strength
+
+        this.checkPoint = checkpointN;
     }
 
     update(){
@@ -11,15 +15,15 @@ class Level {
             
             this.map[i].draw();
             this.map[i].collision();
-            cameraPan(this.map[i], cameraStrength);
+            cameraPan(this.map[i], this.panStrength, this.map);
         }
     }
 
     //TODO Make a map reset
     reload(){
 
-        Player.x = Player.checkPoint.x;
-        Player.y = Player.checkPoint.y;
+        Player.x = this.checkPoint.x;
+        Player.y = this.checkPoint.y;
         Player.vsp = 0;
     }
 }

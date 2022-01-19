@@ -9,15 +9,10 @@ var Player = {
     distanceX: 0,
     distanceY: 0,
 
-    x: 300,
+    x: 1000,
     y: 300,
     width: 50,
     height: 50,
-
-    checkPoint: {
-        x: 300,
-        y: 300
-    },
 
     hsp: 0,
     vsp: 0,

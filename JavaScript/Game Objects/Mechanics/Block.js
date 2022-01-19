@@ -14,7 +14,9 @@ class Block extends GameObject{
                     Player.x += Math.sign(Player.hsp);
                 }
     
+                let temp = Player.hsp;
                 Player.hsp = 0;
+                Player.x -= Math.sign(temp)
             }
         }
     
