@@ -10,6 +10,7 @@ function cameraPan(box, panStrength, mapArray){
     try {
         box.nodes.a += (((screen.availWidth / 2) - Player.x) / panStrength) * mapArray.length;
         box.nodes.b += (((screen.availWidth / 2) - Player.x) / panStrength) * mapArray.length;
+            
     } catch (error) {
         //! I need this for special objects such as the Moving Blocks
     }

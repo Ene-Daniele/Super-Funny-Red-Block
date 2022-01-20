@@ -2,14 +2,20 @@ class Spring extends GameObject {
 
     //TODO Make the spring able to be put on other stuff like moving blocks
 
-    constructor(posX, posY){
+    constructor(posX, posY, base){
 
-        super(posX +10, posY -15, 40, 15, "orange")
+        super(posX +10, posY -15, 40, 15, "orange");
+        this.base = base;
+        this.hsp = 0;
     }
 
     collision(){
 
-        this.x -= Math.sign(Player.hsp) / (10 / cameraStrength);
+        try{
+            this.hsp = this.base.hsp;
+        } catch (error){}
+
+        this.x -= Math.sign(Player.hsp) / (cameraStrength * CHAPTER1[levelIndex].map.length);
         
         if ((
         Player.x + Player.width + Player.hsp) > this.x && 
@@ -28,5 +34,8 @@ class Spring extends GameObject {
             Player.hsp += Math.sign(Player.hsp) * 5;
 
         }
+
+
+        this.x += this.hsp;
     }
 }
