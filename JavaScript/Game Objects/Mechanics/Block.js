@@ -13,10 +13,15 @@ class Block extends GameObject{
                 while ((Player.x + Player.width + Math.sign(Player.hsp)) < this.x & Player.x + Math.sign(Player.hsp) < (this.x + this.width)){
                     Player.x += Math.sign(Player.hsp);
                 }
-    
-                let temp = Player.hsp;
+                
                 Player.hsp = 0;
-                Player.x -= Math.sign(temp)
+                
+                if (Player.x + Player.width > this.x + this.width){
+                    Player.x++;
+                } else {
+                    Player.x--;
+                }
+
             }
         }
     

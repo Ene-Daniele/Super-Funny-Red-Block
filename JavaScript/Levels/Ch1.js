@@ -17,6 +17,7 @@ const CHAPTER1 = [
         new RoomTrigger(4600, 200, 50, 400, 1, {x: 1000, y:500}),
         new Block(4500, 0, 1000, 400, "white"),
         new Block(4300, 600, 1000, 200, "white"),
+
     ]),
     room2 = new Level(120, {x: 1500, y: 500}, [
 
